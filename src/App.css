@@ -1,5 +1,5 @@
 header {
-  height: 5vh;
+  height: 33.44px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -74,12 +74,14 @@ button:hover {
 }
 
 input {
-  width: 347px;
-  height: 34px;
+  width: 417px;
+  height: 32px;
   position: relative;
   left: 40px;
   top: 2px;
   border: none;
+  font: 16px arial, sans-serif;
+  margin-top: 4px;
 }
 
 input:focus {
@@ -150,8 +152,15 @@ i,
   bottom: 17px;
 }
 
+.mark {
+  border-right: 1px solid gray;
+  padding: 15px;
+}
+
 .input-devices i {
-  padding-right: 15px;
+  position: relative;
+  top: 16px;
+  margin-right: 15px;
 }
 
 .input-buttons {
