@@ -33,6 +33,10 @@ header a,
 }
 
 footer {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
   background: #f2f2f2;
   line-height: 40px;
   margin: calc(36vh + 4px) 3px 0px 3px;
@@ -40,6 +44,7 @@ footer {
 
 a {
   font-size: 13px;
+  text-decoration: none;
   padding-right: 27px;
 }
 
@@ -77,18 +82,23 @@ input {
   border: none;
 }
 
+input:focus {
+  outline: none;
+}
+
 i {
   color: #7e7e7e;
 }
 
 a,
 button,
-i {
+i,
+.user-avatar {
   cursor: pointer;
 }
 
 .content {
-  height: 36vh;
+  height: 450px;
   display: grid;
   place-items: start center;
   margin-top: 54px;
@@ -100,6 +110,7 @@ i {
   background-image: url("./assets/images/logo.png");
   background-position: center;
   background-repeat: no-repeat;
+  margin-bottom: -29px;
 }
 
 .user-avatar {
@@ -118,7 +129,12 @@ i {
   position: relative;
   border: 1px solid #dfe1e5;
   border-radius: 24px;
-  margin-top: -27px;
+  margin-top: -68px;
+}
+
+.input:hover {
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+  border-color: rgba(223, 225, 229, 0);
 }
 
 .input-search {
@@ -139,17 +155,24 @@ i {
 }
 
 .input-buttons {
-  margin-top: 18px;
-  margin-right: 17px;
+  position: relative;
+  right: 8px;
+  bottom: 5px;
+  margin: -68px 1px 0px 0px;
 }
 
 .input-buttons button {
   margin-left: 8px;
 }
 
+.input-buttons button:focus {
+  border: 1px solid #4d90fe;
+  outline: none;
+}
+
 .content-information {
   line-height: 28px;
-  margin: 13px 1px 0px 0px;
+  margin: -72px 0px 0px 1px;
   color: #222;
 }
 
@@ -174,4 +197,8 @@ i {
 .footer-bottom a {
   font-size: 14px;
   color: #5f6368;
+}
+
+.footer-bottom a:active {
+  color: #dd4b39;
 }

@@ -6,7 +6,7 @@ export default function Header() {
       <div className="footer-top">Беларусь</div>
       <div className="footer-bottom">
         <div>
-          <a>Реклама</a>
+          <a href="google.com">Реклама</a>
           <a>Для бизнеса</a>
           <a>Всё о Google</a>
           <a>Как работает Google Поиск</a>
