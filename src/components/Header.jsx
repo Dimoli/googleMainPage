@@ -7,7 +7,7 @@ export default function Header() {
         <a>Почта</a>
         <a>Картинки</a>
       </div>
-      <i className="services fa fa-th" aria-hidden="true" />
+      <i className="services fa fa-th fa-lg" aria-hidden="true" />
       <div className="user-avatar" />
     </header>
   );

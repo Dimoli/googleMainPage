@@ -6,12 +6,12 @@ export default function Header() {
       <div className="logo"></div>
       <div className="input">
         <label htmlFor="input">
-          <i className="input-search fa fa-search" aria-hidden="true" />
+          <i className="input-search fa fa-search fa-lg" aria-hidden="true" />
         </label>
         <input id="input"></input>
         <div className="input-devices">
-          <i className="fa fa-keyboard-o" aria-hidden="true" />
-          <i className="fa fa-microphone" aria-hidden="true" />
+          <i className="fa fa-keyboard-o fa-lg" aria-hidden="true" />
+          <i className="fa fa-microphone fa-lg" aria-hidden="true" />
         </div>
       </div>
       <div className="input-buttons">

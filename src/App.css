@@ -77,6 +77,10 @@ input {
   border: none;
 }
 
+i {
+  color: #7e7e7e;
+}
+
 a,
 button,
 i {
@@ -131,7 +135,7 @@ i {
 }
 
 .input-devices i {
-  padding-right: 20px;
+  padding-right: 15px;
 }
 
 .input-buttons {
