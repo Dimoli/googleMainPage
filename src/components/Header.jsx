@@ -8,7 +8,9 @@ export default function Header() {
         <a href="google.com">Картинки</a>
       </div>
       <i className="services fa fa-th fa-lg" aria-hidden="true" />
+      <div className="services-hint">Приложения Google</div>
       <div className="user-avatar" />
+      <div className="user-avatar-hint">Hi to me</div>
     </header>
   );
 }

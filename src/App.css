@@ -14,6 +14,40 @@ header {
   text-align: center;
 }
 
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-image: url("./assets/images/user-avatar.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.services-hint,
+.user-avatar-hint {
+  width: 0px;
+  height: 0px;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 55px;
+  right: 5px;
+  font-size: 14px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+}
+
+.user-avatar:hover + .user-avatar-hint {
+  width: 75px;
+  height: 25px;
+  transition-delay: 500ms;
+  /** If need more space to add words-hints
+    max-width: 240px;
+    line-height: 20px; 
+    */
+}
+
 .header-anchors {
   margin-right: -1px;
 }
@@ -30,6 +64,12 @@ header a,
 
 .services:hover {
   color: #000;
+}
+
+.services:hover + .services-hint {
+  width: 150px;
+  height: 25px;
+  transition-delay: 500ms;
 }
 
 footer {
@@ -115,15 +155,6 @@ i,
   margin-bottom: -29px;
 }
 
-.user-avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-image: url("./assets/images/user-avatar.png");
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .input {
   width: 582px;
   height: 44px;
@@ -146,7 +177,27 @@ i,
   cursor: initial;
 }
 
+.input-hint {
+  width: 0px;
+  height: 0px;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  font-size: 14px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+input:hover + .input-hint {
+  width: 50px;
+  height: 25px;
+  transition-delay: 500ms;
+}
+
 .input-devices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: absolute;
   right: 0px;
   bottom: 17px;
@@ -156,6 +207,47 @@ i,
   border-right: 1px solid gray;
   padding: 15px;
 }
+
+/* .keyboard,
+.microphone {
+  position: relative;
+}
+
+.keyboard-hint-content,
+.microphone-hint-content {
+  width: 0px;
+  height: 0px;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 44px;
+  left: -50px;
+  font-size: 14px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.rectangle {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  bottom: 16px;
+  right: 57px;
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: rotate(45deg);
+}
+
+.fa-microphone:hover + .microphone-hint .microphone-hint-content,
+.fa-keyboard:hover + .keyboard-hint .keyboard-hint-content {
+  width: 120px;
+  height: 20px;
+}
+
+.fa-keyboard:hover + .keyboard-hint .keyboard-hint-content .rectangle,
+.fa-microphone:hover + .microphone-hint .microphone-hint-content .rectangle {
+  width: 8px;
+  height: 8px;
+} */
 
 .input-devices i {
   position: relative;
@@ -210,4 +302,14 @@ i,
 
 .footer-bottom a:active {
   color: #dd4b39;
+}
+
+@media (max-width: 900px) {
+  .footer-top {
+    font-size: 8px;
+  }
+
+  .footer-bottom a {
+    font-size: 7px;
+  }
 }

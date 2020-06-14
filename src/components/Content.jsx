@@ -3,10 +3,34 @@ import React, { useState, useRef } from "react";
 export default function Content() {
   const [mark, setMark] = useState(false);
   const inputRef = useRef(null); // may use "useState" hook instead "useRef"
+  const inputHintRef = useRef(null);
 
   const markOnClick = () => {
     inputRef.current.value = "";
+    inputRef.current.focus();
     setMark(false);
+  };
+
+  const inputOnMouseEnter = (e) => {
+    let posY;
+    let posX;
+
+    if (e.pageX || e.pageY) {
+      posX = e.pageX;
+      posY = e.pageY;
+    } else if (e.clientX || e.clientY) {
+      posX =
+        e.clientX +
+        document.body.scrollLeft +
+        document.documentElement.scrollLeft;
+      posY =
+        e.clientY +
+        document.body.scrollTop +
+        document.documentElement.scrollTop;
+    }
+
+    inputHintRef.current.style.top = `${posY - 270}px`;
+    inputHintRef.current.style.left = `${posX - 350}px`;
   };
 
   return (
@@ -20,7 +44,12 @@ export default function Content() {
           id="input"
           ref={inputRef}
           onChange={(e) => setMark(e.target.value)}
-        ></input>
+          onMouseEnter={inputOnMouseEnter}
+          autoComplete="off"
+        />
+        <div className="input-hint" ref={inputHintRef}>
+          Поиск
+        </div>
         <div className="input-devices">
           {mark && (
             <i
@@ -29,8 +58,24 @@ export default function Content() {
               onClick={markOnClick}
             />
           )}
-          <i className="fa fa-keyboard-o fa-lg" aria-hidden="true" />
-          <i className="fa fa-microphone fa-lg" aria-hidden="true" />
+          <div className="keyboard">
+            <i className="fa fa-keyboard-o fa-lg" aria-hidden="true" />
+            {/* <div className="keyboard-hint">
+              <div className="keyboard-hint-content">
+                Экранная клавиатура
+                <div className="rectangle" />
+              </div>
+            </div> */}
+          </div>
+          <div className="microphone">
+            <i className="fa fa-microphone fa-lg" aria-hidden="true" />
+            {/* <div className="microphone-hint">
+              <div className="microphone-hint-content">
+                Голосовой поиск
+                <div className="rectangle" />
+              </div>
+            </div> */}
+          </div>
         </div>
       </div>
       <div className="input-buttons">
