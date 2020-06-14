@@ -29,8 +29,11 @@ export default function Content() {
         document.documentElement.scrollTop;
     }
 
-    inputHintRef.current.style.top = `${posY - 270}px`;
-    inputHintRef.current.style.left = `${posX - 350}px`;
+    posX -= inputRef.current.getBoundingClientRect().left;
+    posY -= inputRef.current.getBoundingClientRect().top;
+
+    inputHintRef.current.style.top = `${posY + 15}px`;
+    inputHintRef.current.style.left = `${posX + 50}px`;
   };
 
   return (
@@ -50,14 +53,14 @@ export default function Content() {
         <div className="input-hint" ref={inputHintRef}>
           Поиск
         </div>
+        {mark && (
+          <i
+            className="mark fa fa-times fa-lg"
+            aria-hidden="true"
+            onClick={markOnClick}
+          />
+        )}
         <div className="input-devices">
-          {mark && (
-            <i
-              className="mark fa fa-times fa-lg"
-              aria-hidden="true"
-              onClick={markOnClick}
-            />
-          )}
           <div className="keyboard">
             <i className="fa fa-keyboard-o fa-lg" aria-hidden="true" />
             {/* <div className="keyboard-hint">

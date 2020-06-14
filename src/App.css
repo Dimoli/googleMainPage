@@ -204,12 +204,16 @@ input:hover + .input-hint {
   align-items: center;
   position: absolute;
   right: 0px;
-  bottom: 17px;
 }
 
 .mark {
-  border-right: 1px solid gray;
-  padding: 15px;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 80px;
+  top: 17px;
+  border-right: 1px solid rgba(126, 126, 126, 0.5);
+  padding-right: 15px;
 }
 
 /* .keyboard,
