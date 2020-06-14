@@ -312,6 +312,7 @@ input:hover + .input-hint {
   header {
     position: absolute;
     left: calc(var(--width-app) + 35px);
+    top: 0px;
   }
 
   .footer-top {
