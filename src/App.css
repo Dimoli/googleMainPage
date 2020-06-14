@@ -1,3 +1,7 @@
+:root {
+  --width-app: 100%;
+}
+
 header {
   height: 33.44px;
   display: flex;
@@ -304,7 +308,12 @@ input:hover + .input-hint {
   color: #dd4b39;
 }
 
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
+  header {
+    position: absolute;
+    left: calc(var(--width-app) + 35px);
+  }
+
   .footer-top {
     font-size: 8px;
   }
