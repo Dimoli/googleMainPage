@@ -11,7 +11,7 @@ export default function Content() {
     setMark(false);
   };
 
-  const inputOnMouseEnter = (e) => {
+  /*   const inputOnMouseEnter = (e) => {
     let posY;
     let posX;
 
@@ -34,7 +34,7 @@ export default function Content() {
 
     inputHintRef.current.style.top = `${posY + 15}px`;
     inputHintRef.current.style.left = `${posX + 50}px`;
-  };
+  }; */
 
   return (
     <div className="content">
@@ -47,12 +47,12 @@ export default function Content() {
           id="input"
           ref={inputRef}
           onChange={(e) => setMark(e.target.value)}
-          onMouseEnter={inputOnMouseEnter}
+          // onMouseEnter={inputOnMouseEnter}
           autoComplete="off"
         />
-        <div className="input-hint" ref={inputHintRef}>
+        {/*         <div className="input-hint" ref={inputHintRef}>
           Поиск
-        </div>
+        </div> */}
         {mark && (
           <i
             className="mark fa fa-times fa-lg"

@@ -181,7 +181,7 @@ i,
   cursor: initial;
 }
 
-.input-hint {
+/* .input-hint {
   width: 0px;
   height: 0px;
   display: grid;
@@ -197,7 +197,7 @@ input:hover + .input-hint {
   height: 25px;
   z-index: 1;
   transition-delay: 500ms;
-}
+} */
 
 .input-devices {
   display: flex;
