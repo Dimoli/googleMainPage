@@ -195,6 +195,7 @@ i,
 input:hover + .input-hint {
   width: 50px;
   height: 25px;
+  z-index: 1;
   transition-delay: 500ms;
 }
 
@@ -216,7 +217,7 @@ input:hover + .input-hint {
   padding-right: 15px;
 }
 
-/* .keyboard,
+.keyboard,
 .microphone {
   position: relative;
 }
@@ -228,34 +229,64 @@ input:hover + .input-hint {
   display: grid;
   place-items: center;
   position: absolute;
-  top: 44px;
-  left: -50px;
-  font-size: 14px;
+  top: 50px;
+  font-size: 11px;
   color: white;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
-.rectangle {
+.keyboard-hint-content {
+  left: -66px;
+}
+
+.microphone-hint-content {
+  left: -53px;
+}
+
+.microphone-rectangle {
   width: 0px;
   height: 0px;
   position: absolute;
-  bottom: 16px;
-  right: 57px;
-  background-color: rgba(0, 0, 0, 0.8);
+  bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.85);
   transform: rotate(45deg);
 }
 
-.fa-microphone:hover + .microphone-hint .microphone-hint-content,
-.fa-keyboard:hover + .keyboard-hint .keyboard-hint-content {
-  width: 120px;
-  height: 20px;
+.keyboard-rectangle {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  right: 70px;
+  bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.85);
+  transform: rotate(45deg);
 }
 
-.fa-keyboard:hover + .keyboard-hint .keyboard-hint-content .rectangle,
-.fa-microphone:hover + .microphone-hint .microphone-hint-content .rectangle {
+.fa-keyboard-o:hover + .keyboard-hint .keyboard-hint-content,
+.fa-microphone:hover + .microphone-hint .microphone-hint-content {
+  height: 27px;
+  z-index: 1;
+}
+
+.fa-keyboard-o:hover + .keyboard-hint .keyboard-hint-content {
+  width: 150px;
+}
+
+.fa-microphone:hover + .microphone-hint .microphone-hint-content {
+  width: 120px;
+}
+
+.fa-keyboard-o:hover
+  + .keyboard-hint
+  .keyboard-hint-content
+  .keyboard-rectangle,
+.fa-microphone:hover
+  + .microphone-hint
+  .microphone-hint-content
+  .microphone-rectangle {
   width: 8px;
   height: 8px;
-} */
+}
 
 .input-devices i {
   position: relative;

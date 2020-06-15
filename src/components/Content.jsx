@@ -63,21 +63,21 @@ export default function Content() {
         <div className="input-devices">
           <div className="keyboard">
             <i className="fa fa-keyboard-o fa-lg" aria-hidden="true" />
-            {/* <div className="keyboard-hint">
+            <div className="keyboard-hint">
               <div className="keyboard-hint-content">
                 Экранная клавиатура
-                <div className="rectangle" />
+                <div className="keyboard-rectangle" />
               </div>
-            </div> */}
+            </div>
           </div>
           <div className="microphone">
             <i className="fa fa-microphone fa-lg" aria-hidden="true" />
-            {/* <div className="microphone-hint">
+            <div className="microphone-hint">
               <div className="microphone-hint-content">
                 Голосовой поиск
-                <div className="rectangle" />
+                <div className="microphone-rectangle" />
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
